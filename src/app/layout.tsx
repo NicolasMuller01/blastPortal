@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Chakra_Petch } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { LampDemo } from "./components/ui/lamp";
 
 const chakra = Chakra_Petch({ weight: "400", subsets: ["latin"] });
 
@@ -17,9 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${chakra.className} relative flex min-h-full w-full flex-1 flex-col overflow-clip rounded-md border-2 border-camo-500 transition-colors bg-gradient-to-b from-[#11140C] from-[27.54%] to-[#252B1B]`}
-      >
+      <body className={`${chakra.className} `} style={{ overflowX: "hidden" }}>
         <Navbar />
         {children}
       </body>
